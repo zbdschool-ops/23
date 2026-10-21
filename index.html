@@ -341,6 +341,121 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 .question-highlight-sub{font-size:13px}
 .yn-btn-v2{font-size:14px;padding:12px 16px}
 }
+
+/* Стилі обмежені завданням #s5t2, щоб не змінювати інші елементи сайту */
+#s5t2 .sort-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 16px 0;
+}
+#s5t2 .sort-card {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  background: var(--card);
+  transition: border-color 0.2s, background-color 0.2s;
+}
+#s5t2 .sort-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.45;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+#s5t2 .sort-card label {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: var(--text);
+}
+#s5t2 .sort-select {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+#s5t2 .sort-select:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+#s5t2 .sort-card.is-correct {
+  border-color: var(--success);
+  background: #dcfce7;
+}
+#s5t2 .sort-card.is-incorrect {
+  border-color: var(--danger);
+  background: #fee2e2;
+}
+#s5t2 .sort-card-feedback {
+  margin-top: 9px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+#s5t2 .sort-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+#s5t2 .sort-actions button {
+  min-height: 48px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+#s5t2 .sort-actions .btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+#s5t2 .sort-actions .btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+#s5t2 .sort-actions .btn-secondary {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--border);
+}
+#s5t2 .sort-actions .btn-secondary:hover {
+  background: #e2e8f0;
+}
+#s5t2 .sort-result {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  line-height: 1.55;
+  border: 2px solid var(--border);
+  background: var(--bg);
+}
+#s5t2 .sort-result strong {
+  display: block;
+  margin-bottom: 5px;
+}
+@media (max-width: 600px) {
+  #s5t2 .sort-actions {
+    flex-direction: column;
+  }
+  #s5t2 .sort-actions button {
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body>
@@ -361,7 +476,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 </div>
 </div>
 </header>
-
 <main class="container hidden" id="mainPage">
 <div class="hero-unified">
 <div class="hero-illustration">
@@ -399,7 +513,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 </div>
 <div class="tip-card">💡 <strong>Пам'ятай:</strong> Раніше життєвий трек людини був лінійним: школа → університет → одна робота на все життя. Сьогодні цей підхід застарів. Світ перейшов до концепції навчання впродовж життя.</div>
 </main>
-
 <main class="container hidden" id="step1Page">
 <div class="step-header"><h2 class="step-title">🎯 Крок 1. Стартове завдання</h2></div>
 <section class="card">
@@ -447,7 +560,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 </div>
 </section>
 </main>
-
 <main class="container hidden" id="step2Page">
 <div class="step-header"><div class="step-header-top"><h2 class="step-title">🌍 Крок 2. Навчання впродовж життя</h2><span class="step-badge">📝 3 завдання</span></div></div>
 <section class="card" id="s2Theory">
@@ -505,7 +617,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div class="key-point">💡 <strong>Важливо!</strong> Навчатися можна в будь-якому віці, у різних місцях і різними способами. Головне — бути відкритими до нового та постійно розвивати свої знання й уміння.</div>
 <div class="navigation"><button class="btn btn-secondary" onclick="goToMainPage()">🏠 До змісту</button><button class="btn btn-primary" onclick="showS2('s2t1')">➡️ Далі: Завдання 1</button></div>
 </section>
-
 <section class="card hidden" id="s2t1">
 <h2> Завдання 1. Аналіз ситуацій</h2>
 <div class="feedback feedback-warning mb-24">
@@ -550,7 +661,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div id="s2t1f" class="feedback" style="display:none"></div>
 <div class="navigation"><button class="btn btn-secondary" onclick="showS2('s2Theory')">⬅️ Назад</button><button class="btn btn-primary" onclick="chk('s2t1','step2_task1')">✅ Перевірити</button><button class="btn btn-success" onclick="showS2('s2t2')">➡️ Далі</button></div>
 </section>
-
 <section class="card hidden" id="s2t2">
 <h2> Завдання 2. Дослідження: де і як ми навчаємось?</h2>
 <div class="feedback feedback-warning mb-24"><strong>📌 Інструкція:</strong> Натисни на будь-яку картку — під нею розгорнеться інформація з прикладами та особливостями. Досліди всі 6 способів навчання!</div>
@@ -673,7 +783,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div id="s2t2f" class="feedback" style="display:none"></div>
 <div class="navigation"><button class="btn btn-secondary" onclick="showS2('s2t1')">⬅️ Назад</button><button class="btn btn-primary" onclick="chkResearch2()">✅ Завершити дослідження</button><button class="btn btn-success" onclick="showS2('s2t3')">️ Далі</button></div>
 </section>
-
 <section class="card hidden" id="s2t3">
 <h2>✍️ Завдання 3. Заповни пропуски</h2>
 <div class="feedback feedback-warning mb-24"><strong>📌 Інструкція:</strong> Натисни на пропущене слово → потім на потрібне слово зі «Слова-підказки».</div>
@@ -696,7 +805,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div class="navigation"><button class="btn btn-secondary" onclick="showS2('s2t2')">️ Назад</button><button class="btn btn-primary" onclick="chkFill('fillText2',5,'s2t3f','step2_task3')">✅ Перевірити</button><button class="btn btn-success" onclick="goToStep(3)">➡️ Далі: Крок 3</button></div>
 </section>
 </main>
-
 <main class="container hidden" id="step3Page">
 <div class="step-header"><div class="step-header-top"><h2 class="step-title">🚀 Крок 3. Для чого потрібно навчатися?</h2><span class="step-badge">📝 3 завдання</span></div></div>
 <section class="card" id="s3Theory">
@@ -753,7 +861,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div class="key-point">💡 <strong>Важливо!</strong> Навчання — це не лише підготовка до професії, а й шлях до щасливого, успішного та змістовного життя.</div>
 <div class="navigation"><button class="btn btn-secondary" onclick="goToMainPage()">🏠 До змісту</button><button class="btn btn-primary" onclick="showS3('s3t1')">➡️ Далі: Завдання 1</button></div>
 </section>
-
 <section class="card hidden" id="s3t1">
 <h2>🎯 Завдання 1. Вибір аргументів</h2>
 <div class="feedback feedback-warning mb-24"><strong>📌 Інструкція:</strong> Обери одну з позицій, а потім познач аргументи, які підтримують твій вибір.</div>
@@ -776,7 +883,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div id="s3t1f" class="feedback" style="display:none"></div>
 <div class="navigation"><button class="btn btn-secondary" onclick="showS3('s3Theory')">⬅️ Назад</button><button class="btn btn-primary" onclick="chkArguments()">✅ Перевірити</button><button class="btn btn-success" onclick="showS3('s3t2')">️ Далі</button></div>
 </section>
-
 <section class="card hidden" id="s3t2">
 <h2>📖 Завдання 2. Історія успіху: Ірина Бурик</h2>
 <div class="story-block">
@@ -921,7 +1027,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div id="s3t2f" class="feedback" style="display:none"></div>
 <div class="navigation"><button class="btn btn-secondary" onclick="showS3('s3t1')">⬅️ Назад</button><button class="btn btn-primary" onclick="chkStoryQuestions()">✅ Перевірити всі відповіді</button><button class="btn btn-success" onclick="showS3('s3t3')">➡️ Далі</button></div>
 </section>
-
 <section class="card hidden" id="s3t3">
 <h2>💬 Завдання 3. Дискусія: два фахівці</h2>
 <div class="feedback feedback-warning mb-24">
@@ -965,7 +1070,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div class="navigation"><button class="btn btn-secondary" onclick="showS3('s3t2')">⬅️ Назад</button><button class="btn btn-primary" onclick="chk('s3t3','step3_task3')">✅ Перевірити</button><button class="btn btn-success" onclick="goToStep(4)">️ Далі: Крок 4</button></div>
 </section>
 </main>
-
 <main class="container hidden" id="step4Page">
 <div class="step-header"><div class="step-header-top"><h2 class="step-title"> Крок 4. Уміння вчитися</h2><span class="step-badge"> 3 завдання</span></div></div>
 <section class="card" id="s4Theory">
@@ -1016,7 +1120,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div class="key-point">💡 <strong>Важливо!</strong> Це не просте зазубрювання параграфів перед контрольною, а свідоме керування власною пізнавальною діяльністю.</div>
 <div class="navigation"><button class="btn btn-secondary" onclick="goToMainPage()">🏠 До змісту</button><button class="btn btn-primary" onclick="showS4('s4t1')">➡️ Далі: Завдання 1</button></div>
 </section>
-
 <section class="card hidden" id="s4t1">
 <h2>✅ Завдання 1. Самооцінювання «Чекліст умінь»</h2>
 <div class="feedback feedback-warning mb-24"><strong>📌 Інструкція:</strong> Оціни кожне вміння за трьома рівнями. Це допоможе зрозуміти твої сильні сторони та що потрібно вдосконалити.</div>
@@ -1091,7 +1194,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div id="s4t1f" class="feedback" style="display:none"></div>
 <div class="navigation"><button class="btn btn-secondary" onclick="showS4('s4Theory')">⬅️ Назад</button><button class="btn btn-primary" onclick="chkChecklistLevel()">✅ Завершити</button><button class="btn btn-success" onclick="showS4('s4t2')">➡️ Далі</button></div>
 </section>
-
 <section class="card hidden" id="s4t2">
 <h2>🎯 Завдання 2. Визнач сильні та слабкі сторони</h2>
 <div class="feedback feedback-warning mb-24"><strong>📌 Інструкція:</strong> Визнач одне вміння, яке є твоєю сильною стороною, та одне, яке потрібно вдосконалити.</div>
@@ -1120,7 +1222,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div id="s4t2f" class="feedback" style="display:none"></div>
 <div class="navigation"><button class="btn btn-secondary" onclick="showS4('s4t1')">⬅️ Назад</button><button class="btn btn-primary" onclick="chkSkillChoice()">✅ Завершити</button><button class="btn btn-success" onclick="showS4('s4t3')">➡️ Далі</button></div>
 </section>
-
 <section class="card hidden" id="s4t3">
 <h2>✅❌ Завдання 3. Так чи Ні?</h2>
 <div class="feedback feedback-warning mb-24"><strong>📌 Інструкція:</strong> Для кожного твердження обери — чи воно правильне. Натисни «Так» або «Ні».</div>
@@ -1155,7 +1256,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div class="navigation"><button class="btn btn-secondary" onclick="showS4('s4t2')">⬅️ Назад</button><button class="btn btn-primary" onclick="chkYNV2('ynGrid4',5,'s4t3f','step4_task3')">✅ Перевірити</button><button class="btn btn-success" onclick="goToStep(5)">️ Далі: Крок 5</button></div>
 </section>
 </main>
-
 <main class="container hidden" id="step5Page">
 <div class="step-header"><div class="step-header-top"><h2 class="step-title">🎓 Крок 5. Способи навчання</h2><span class="step-badge">📝 3 завдання</span></div></div>
 <section class="card" id="s5Theory">
@@ -1239,7 +1339,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div class="key-point">💡 <strong>Пам'ятай:</strong> Жодна форма навчання не є кращою чи гіршою за іншу. Важливо поєднувати їх, щоб досягати своїх цілей ефективно.</div>
 <div class="navigation"><button class="btn btn-secondary" onclick="goToMainPage()"> До змісту</button><button class="btn btn-primary" onclick="showS5('s5t1')">➡️ Далі: Завдання 1</button></div>
 </section>
-
 <section class="card hidden" id="s5t1">
 <h2>🗂️ Завдання 1. Класифікація: три види навчання</h2>
 <div class="feedback feedback-warning mb-24"><strong> Інструкція:</strong> Визнач, до якого виду навчання належить кожна ситуація: формальне, неформальне чи інформальне.</div>
@@ -1268,59 +1367,221 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div class="navigation"><button class="btn btn-secondary" onclick="showS5('s5Theory')">️ Назад</button><button class="btn btn-primary" onclick="chkTZ('s5t1',{d1:'formal',d2:'informal',d3:'nonformal',d4:'informal',d5:'formal',d6:'nonformal'},'step5_task1')">✅ Перевірити</button><button class="btn btn-success" onclick="showS5('s5t2')">➡️ Далі</button></div>
 </section>
 
+<!-- Завдання 2. Аналіз ситуації: Три шляхи до знань -->
 <section class="card hidden" id="s5t2">
-<h2> Завдання 2. Аналіз ситуації</h2>
-<div class="feedback feedback-warning mb-24">
-<strong>📌 Ситуація:</strong> Марко навчається у школі, відвідує курси програмування, а нові прийоми створення сайтів опановує самостійно, переглядаючи відео та виконуючи власні проєкти.
-</div>
-<div class="situation-layout">
-<div class="situation-illustration-left">
-<div class="img-wrapper">
-<img src="https://res.cloudinary.com/dmydvhkzr/image/upload/v1792438985/23-5_xlndvv.png" alt="Марко навчається програмуванню" class="situation-img" onerror="this.parentElement.classList.add('img-failed')">
-<div class="img-fallback">💻<div class="img-fallback-text">🖼️ Місце для ілюстрації: підліток за комп'ютером, що створює вебсайт</div></div>
-</div>
-</div>
-<div>
-<div class="feedback feedback-info mb-24">
-<strong>📌 Запитання:</strong> Що з цього є формальним, неформальним та інформальним навчанням?
-</div>
-<div class="task-options" id="s5t2">
-<div class="option" data-correct="true" onclick="tog(this)" tabindex="0">
-<div class="option-checkbox"></div>
-<div class="option-text">
-<div class="option-label">🏫 Навчання в школі — це формальне навчання (заклад освіти, структурована програма, документ)</div>
-</div>
-</div>
-<div class="option" data-correct="true" onclick="tog(this)" tabindex="0">
-<div class="option-checkbox"></div>
-<div class="option-text">
-<div class="option-label">🎯 Курси програмування — неформальне навчання (поза школою, практичні навички)</div>
-</div>
-</div>
-<div class="option" data-correct="true" onclick="tog(this)" tabindex="0">
-<div class="option-checkbox"></div>
-<div class="option-text">
-<div class="option-label">🌍 Самостійне опанування через відео та власні проєкти — інформальне навчання</div>
-</div>
-</div>
-<div class="option" data-correct="false" onclick="tog(this)" tabindex="0">
-<div class="option-checkbox"></div>
-<div class="option-text">
-<div class="option-label">😐 Достатньо лише шкільного навчання — інші форми не мають значення</div>
-</div>
-</div>
-<div class="option" data-correct="true" onclick="tog(this)" tabindex="0">
-<div class="option-checkbox"></div>
-<div class="option-text">
-<div class="option-label">💡 Поєднання всіх трьох форм робить навчання Марка ефективним і різнобічним</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="s5t2f" class="feedback" style="display:none"></div>
-<div class="navigation"><button class="btn btn-secondary" onclick="showS5('s5t1')">⬅️ Назад</button><button class="btn btn-primary" onclick="chkMulti('s5t2','s5t2f',4,'step5_task2')">✅ Перевірити</button><button class="btn btn-success" onclick="showS5('s5t3')">️ Далі</button></div>
+  <h2>Завдання 2. Аналіз ситуації: Три шляхи до знань</h2>
+
+  <div class="feedback feedback-warning mb-24">
+    <strong>📌 Ситуація:</strong>
+    Марко навчається у школі, відвідує курси програмування, а нові прийоми
+    створення сайтів опановує самостійно, переглядаючи відео та виконуючи власні проєкти.
+  </div>
+
+  <div class="situation-layout">
+    <div class="situation-illustration-left">
+      <div class="img-wrapper">
+        <img
+          src="https://res.cloudinary.com/dmydvhkzr/image/upload/v1792438985/23-5_xlndvv.png"
+          alt="Марко навчається програмуванню"
+          class="situation-img"
+          onerror="this.parentElement.classList.add('img-failed')"
+        >
+        <div class="img-fallback">
+          💻
+          <div class="img-fallback-text">
+            🖼️ Місце для ілюстрації: підліток за комп’ютером, який створює вебсайт
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="learning-sort-task" id="s5t2-sort">
+      <div class="feedback feedback-info mb-24">
+        <strong>🎯 Завдання:</strong>
+        Визнач, до якої форми навчання належить кожен приклад.
+        Для кожної картки обери одну категорію.
+      </div>
+
+      <div class="sort-cards" aria-label="Приклади навчання">
+        <article class="sort-card" data-item="school">
+          <div class="sort-card-title">🏫 Навчається у школі</div>
+          <label for="s5t2-school">Форма навчання:</label>
+          <select id="s5t2-school" class="sort-select" data-answer="formal">
+            <option value="">Обери відповідь…</option>
+            <option value="formal">Формальне навчання</option>
+            <option value="nonformal">Неформальне навчання</option>
+            <option value="informal">Інформальне навчання</option>
+          </select>
+          <div class="sort-card-feedback" id="s5t2-school-feedback" aria-live="polite"></div>
+        </article>
+
+        <article class="sort-card" data-item="courses">
+          <div class="sort-card-title">💻 Відвідує курси програмування</div>
+          <label for="s5t2-courses">Форма навчання:</label>
+          <select id="s5t2-courses" class="sort-select" data-answer="nonformal">
+            <option value="">Обери відповідь…</option>
+            <option value="formal">Формальне навчання</option>
+            <option value="nonformal">Неформальне навчання</option>
+            <option value="informal">Інформальне навчання</option>
+          </select>
+          <div class="sort-card-feedback" id="s5t2-courses-feedback" aria-live="polite"></div>
+        </article>
+
+        <article class="sort-card" data-item="video">
+          <div class="sort-card-title">▶️ Самостійно навчається за відео</div>
+          <label for="s5t2-video">Форма навчання:</label>
+          <select id="s5t2-video" class="sort-select" data-answer="informal">
+            <option value="">Обери відповідь…</option>
+            <option value="formal">Формальне навчання</option>
+            <option value="nonformal">Неформальне навчання</option>
+            <option value="informal">Інформальне навчання</option>
+          </select>
+          <div class="sort-card-feedback" id="s5t2-video-feedback" aria-live="polite"></div>
+        </article>
+      </div>
+
+      <div class="sort-actions">
+        <button type="button" class="btn btn-primary" id="s5t2-check">Перевірити відповіді</button>
+        <button type="button" class="btn btn-secondary" id="s5t2-reset">Спробувати ще раз</button>
+      </div>
+
+      <div class="sort-result" id="s5t2-result" role="status" aria-live="polite" hidden></div>
+    </div>
+  </div>
+
+  <div class="navigation">
+    <button class="btn btn-secondary" onclick="showS5('s5t1')">⬅️ Назад</button>
+    <button class="btn btn-success" onclick="showS5('s5t3')" id="s5t2-next" style="display:none;">➡️ Далі</button>
+  </div>
 </section>
+
+<script>
+(function () {
+  const root = document.getElementById('s5t2');
+  if (!root || root.dataset.sortInitialized === 'true') return;
+  root.dataset.sortInitialized = 'true';
+
+  const items = [
+    {
+      id: 'school',
+      correct: 'formal',
+      label: 'Навчання у школі',
+      explanation: 'Формальне навчання відбувається в закладі освіти за структурованою програмою.'
+    },
+    {
+      id: 'courses',
+      correct: 'nonformal',
+      label: 'Курси програмування',
+      explanation: 'Неформальне навчання — це організоване навчання поза системою формальної освіти для здобуття практичних навичок.'
+    },
+    {
+      id: 'video',
+      correct: 'informal',
+      label: 'Самостійне навчання за відео',
+      explanation: 'Інформальне навчання відбувається стихійно, самостійно через пошук інформації, досвід і власну діяльність.'
+    }
+  ];
+
+  const names = {
+    formal: 'формальне навчання',
+    nonformal: 'неформальне навчання',
+    informal: 'інформальне навчання'
+  };
+
+  const checkButton = root.querySelector('#s5t2-check');
+  const resetButton = root.querySelector('#s5t2-reset');
+  const result = root.querySelector('#s5t2-result');
+  const nextButton = root.querySelector('#s5t2-next');
+
+  checkButton.addEventListener('click', function () {
+    let correctCount = 0;
+    let unansweredCount = 0;
+
+    items.forEach(function (item) {
+      const select = root.querySelector('#s5t2-' + item.id);
+      const card = root.querySelector('[data-item="' + item.id + '"]');
+      const feedback = root.querySelector('#s5t2-' + item.id + '-feedback');
+      const value = select.value;
+
+      card.classList.remove('is-correct', 'is-incorrect');
+
+      if (!value) {
+        unansweredCount++;
+        card.classList.add('is-incorrect');
+        feedback.textContent = '⚠️ Обери форму навчання.';
+        feedback.style.color = '#991b1b';
+      } else if (value === item.correct) {
+        correctCount++;
+        card.classList.add('is-correct');
+        feedback.textContent = '✅ Правильно! ' + item.explanation;
+        feedback.style.color = '#166534';
+      } else {
+        card.classList.add('is-incorrect');
+        feedback.textContent = '❌ Правильна відповідь: ' + names[item.correct] + '. ' + item.explanation;
+        feedback.style.color = '#991b1b';
+      }
+    });
+
+    result.hidden = false;
+    if (correctCount === items.length) {
+      result.innerHTML = '<strong>🎉 Чудово! 3 із 3 правильних відповідей.</strong> Ти чудово розрізняєш форми навчання.';
+      result.style.background = '#dcfce7';
+      result.style.borderColor = '#16a34a';
+      result.style.color = '#166534';
+      
+      // Інтеграція з системою прогресу основного коду
+      if (typeof addC === 'function') {
+        addC('step5_task2');
+      }
+      if (typeof showToast === 'function') {
+        showToast('✅ Завдання виконано!', '✅');
+      }
+      
+      // Показуємо кнопку "Далі"
+      if (nextButton) {
+        nextButton.style.display = 'inline-flex';
+      }
+    } else {
+      result.innerHTML = '<strong>Результат: ' + correctCount + ' із 3.</strong>' +
+        (unansweredCount
+          ? ' Заповни всі поля та перевір відповіді ще раз.'
+          : ' Переглянь пояснення біля карток і спробуй ще раз.');
+      result.style.background = '#fee2e2';
+      result.style.borderColor = '#dc2626';
+      result.style.color = '#991b1b';
+      
+      if (nextButton) {
+        nextButton.style.display = 'none';
+      }
+    }
+  });
+
+  resetButton.addEventListener('click', function () {
+    items.forEach(function (item) {
+      const select = root.querySelector('#s5t2-' + item.id);
+      const card = root.querySelector('[data-item="' + item.id + '"]');
+      const feedback = root.querySelector('#s5t2-' + item.id + '-feedback');
+
+      select.value = '';
+      card.classList.remove('is-correct', 'is-incorrect');
+      feedback.textContent = '';
+      feedback.style.color = '';
+    });
+
+    result.hidden = true;
+    result.textContent = '';
+    result.style.background = '';
+    result.style.borderColor = '';
+    result.style.color = '';
+    
+    if (nextButton) {
+      nextButton.style.display = 'none';
+    }
+    
+    root.querySelector('#s5t2-school').focus();
+  });
+})();
+</script>
 
 <section class="card hidden" id="s5t3">
 <h2>🚀 Завдання 3. Проєкт самовдосконалення</h2>
@@ -1366,7 +1627,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div class="navigation"><button class="btn btn-secondary" onclick="showS5('s5t2')">️ Назад</button><button class="btn btn-primary" onclick="chkProject()">✅ Завершити проєкт</button><button class="btn btn-success" onclick="goToStep(6)">➡️ Далі: Самооцінювання</button></div>
 </section>
 </main>
-
 <main class="container hidden" id="step6Page">
 <div class="step7-header"><h2>🎉 Вітаємо! Ти завершив(ла) параграф!</h2><p> Час дізнатися свій рівень</p></div>
 <div class="card"><h2>⭐ Оціни свої вміння</h2>
@@ -1387,7 +1647,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div class="tip-card"> <strong>Навчання — це не лише підготовка до професії, а й шлях до щасливого, успішного та змістовного життя.</strong><br>🌱 Кожен, хто перестає вчитися — старіє, неважливо, в 20 чи в 80 років.</div>
 <div class="navigation"><button class="btn btn-warning" onclick="resetProgress()">🔄 Пройти ще раз</button><button class="btn btn-primary" onclick="goToMainPage()">🏠 На головну</button></div>
 </main>
-
 <div class="modal-overlay" id="progressModal" role="dialog" aria-modal="true" aria-labelledby="pTitle">
 <div class="modal"><div class="modal-header"><h2 id="pTitle">📊 Мій прогрес</h2><button class="modal-close" onclick="closeModal('progressModal')">✕</button></div>
 <div class="text-center"><div style="font-size:48px;margin-bottom:16px" id="mEmoji">⭐☆☆☆☆</div><h3 style="color:var(--primary);margin-bottom:24px" id="mName">Початківець</h3>
@@ -1407,7 +1666,6 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background
 <div data-icon="📊" style="padding:10px 0 10px 32px;position:relative"><strong>📊 Прогрес:</strong><br>Натисни на віджет прогресу.</div>
 </div>
 <button class="btn btn-primary mt-24" onclick="closeModal('helpModal')" style="width:100%">👍 Зрозуміло!</button></div></div>
-
 <script>
 var TOTAL_TASKS = 16;
 var ST = {step1:{t:1,c:0,tasks:{task1:0}},step2:{t:3,c:0,tasks:{task1:0,task2:0,task3:0}},step3:{t:3,c:0,tasks:{task1:0,task2:0,task3:0}},step4:{t:3,c:0,tasks:{task1:0,task2:0,task3:0}},step5:{t:3,c:0,tasks:{task1:0,task2:0,task3:0}}};
@@ -1422,7 +1680,6 @@ var checklistLevels = {1:0,2:0,3:0,4:0,5:0,6:0};
 var strongSkill = '';
 var weakSkill = '';
 var researchVisited = {};
-
 var positionArguments = {
 1: [
 {text: 'Престижний диплом відкриває двері в топові компанії', correct: true},
@@ -1439,20 +1696,15 @@ var positionArguments = {
 {text: 'Навчання після університету не має значення', correct: false}
 ]
 };
-
 function addC(id){if(PT.a.indexOf(id)!==-1)return;PT.a.push(id);PT.c++;updST(id);updLive();saveP()}
 function updST(id){var m=id.match(/step(\d+)_(task\d+)/);if(!m)return;var sn=parseInt(m[1]),tn=m[2],sk="step"+sn,s=ST[sk];if(s&&s.tasks.hasOwnProperty(tn)){s.tasks[tn]=1;s.c=0;for(var k in s.tasks)if(s.tasks[k])s.c++;if(s.c===s.t&&!SC[sn]){SC[sn]=1;showToast(" Крок "+sn+" завершено!","")}}updS6()}
 function updLive(){try{var c=0;for(var i=1;i<=5;i++)c+=ST["step"+i].c;var p=Math.min(100,Math.round(c/TOTAL_TASKS*100));var b=document.getElementById("topProgressBar");if(b)b.style.width=p+"%";var wp=document.getElementById("widgetPercentage");if(wp)wp.textContent=p+"%";var wt=document.getElementById("widgetTasks");if(wt)wt.textContent=c+"/"+TOTAL_TASKS;updateWidgetMiniMap();renderNav();updS6()}catch(e){console.error(e)}}
 function updateWidgetMiniMap(){var wb=document.getElementById("widgetMiniMap");if(!wb)return;wb.innerHTML="";for(var i=1;i<=5;i++){var d=document.createElement("div");d.className="mini-step";if(SC[i])d.classList.add("completed");else if(i===state.cs)d.classList.add("current");d.textContent=i;wb.appendChild(d)}}
 function saveP(){try{sessionStorage.setItem("s23v7",JSON.stringify({PT:PT,ST:ST,SC:SC,state:state,checklistLevels:checklistLevels,strongSkill:strongSkill,weakSkill:weakSkill,researchVisited:researchVisited}))}catch(e){}}
 function loadP(){try{var s=localStorage.getItem("s23v7");if(s){var d=JSON.parse(s);if(d.PT){PT.c=d.PT.c||0;PT.a=d.PT.a||[]}if(d.ST){for(var i=1;i<=5;i++)if(d.ST["step"+i]){ST["step"+i].c=d.ST["step"+i].c||0;ST["step"+i].tasks=d.ST["step"+i].tasks||ST["step"+i].tasks}}if(d.SC)for(var j=1;j<=5;j++)SC[j]=d.SC[j]||0;if(d.state){state.cs=d.state.cs||0;state.sr=d.state.sr||[0,0,0,0,0];while(state.sr.length<5)state.sr.push(0)}if(d.checklistLevels)checklistLevels=d.checklistLevels;if(d.strongSkill)strongSkill=d.strongSkill;if(d.weakSkill)weakSkill=d.weakSkill;if(d.researchVisited)researchVisited=d.researchVisited}}catch(e){}updLive();renderNav()}
-
 var steps=[{id:1,icon:"🎯",title:"Стартове завдання",tasks:1},{id:2,icon:"🌍",title:"Навчання впродовж життя",tasks:3},{id:3,icon:"🚀",title:"Для чого навчатися",tasks:3},{id:4,icon:"🧠",title:"Уміння вчитися",tasks:3},{id:5,icon:"🎓",title:"Способи навчання",tasks:3},{id:6,icon:"🏆",title:"Самооцінювання",tasks:0}];
-
 function renderNav(){var n=document.getElementById("stepNavigation");if(!n)return;n.innerHTML="";for(var i=0;i<steps.length;i++){var s=steps[i];var d=document.createElement("div");d.className="step-nav-item";var td=s.tasks>0?ST["step"+s.id].c:0;var ic=s.tasks>0&&SC[s.id];if(s.id===6&&SC[5])d.classList.add("completed");else if(ic)d.classList.add("completed");else if(i===state.cs-1)d.classList.add("active");d.innerHTML='<div class="step-nav-number">'+(ic?"✓":(i+1))+'</div><div class="step-nav-content"><div class="step-nav-title">'+s.icon+" "+s.title+'</div><div class="step-nav-status">'+(s.tasks>0?td+"/"+s.tasks+" завдань":" Фінал")+'</div></div>';d.setAttribute("tabindex","0");d.setAttribute("role","button");(function(idx){d.onclick=function(){goToStep(idx+1)};d.onkeydown=function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();goToStep(idx+1)}}})(i);n.appendChild(d)}}
-
 function updS6(){var c=0;for(var i=1;i<=5;i++)c+=ST["step"+i].c;var p=Math.min(100,Math.round(c/TOTAL_TASKS*100));var ac=PT.t>0?Math.round(PT.c/PT.t*100):0;var cs=0;for(var j=1;j<=5;j++)if(SC[j])cs++;var e=function(id,v){var el=document.getElementById(id);if(el)el.textContent=v};e("statTasks",c+"/"+TOTAL_TASKS);e("statCorrect",PT.c);e("statSteps",cs+"/5");e("statAccuracy",ac+"%");var ci=document.getElementById("progressCircle");if(ci)ci.style.background="conic-gradient(var(--success) "+p+"%,var(--bg) "+p+"%)";var cp=document.getElementById("circlePercentage");if(cp)cp.textContent=p+"%";var l="Початківець",em="⭐☆☆☆☆";if(p>=76){l="🏆 Майстер навчання";em="⭐⭐⭐⭐⭐"}else if(p>=51){l=" Досвідчений учень";em="⭐⭐⭐☆☆"}else if(p>=26){l="🥉 Учень";em="⭐⭐☆☆☆"}e("finalLevelTitle",l);e("finalLevelDesc",em);for(var k=0;k<state.sr.length;k++)if(state.sr[k]>0)rate(k+1,state.sr[k])}
-
 function hideAll(){var p=["mainPage","step1Page","step2Page","step3Page","step4Page","step5Page","step6Page"];for(var i=0;i<p.length;i++){var el=document.getElementById(p[i]);if(el)el.classList.add("hidden")}}
 function goToMainPage(){hideAll();document.getElementById("mainPage").classList.remove("hidden");document.getElementById("headerTitle").textContent="📚 § 23. Навчання впродовж життя";state.cs=0;saveP();window.scrollTo({top:0,behavior:"smooth"})}
 function goToStep(n){hideAll();var pages={1:"step1Page",2:"step2Page",3:"step3Page",4:"step4Page",5:"step5Page",6:"step6Page"};var el=document.getElementById(pages[n]);if(el){el.classList.remove("hidden");state.cs=n;if(n===2)initS2();if(n===5)initS5();if(n===6)updS6();saveP();window.scrollTo({top:0,behavior:"smooth"})}}
@@ -1462,14 +1714,10 @@ function showS4(id){["s4Theory","s4t1","s4t2","s4t3"].forEach(function(s){var e=
 function showS5(id){["s5Theory","s5t1","s5t2","s5t3"].forEach(function(s){var e=document.getElementById(s);if(e)e.classList.add("hidden")});document.getElementById(id).classList.remove("hidden");if(id==="s5t1")initTZ('s5t1');window.scrollTo({top:0,behavior:"smooth"})}
 function initS2(){}
 function initS5(){initTZ('s5t1')}
-
 function sel(el,gid){if(el.classList.contains("disabled"))return;var opts=document.querySelectorAll("#"+gid+" .option");for(var i=0;i<opts.length;i++)opts[i].classList.remove("selected");el.classList.add("selected")}
 function tog(el){if(el.classList.contains("disabled"))return;el.classList.toggle("selected")}
-
 function chk(gid,tid){var s=document.querySelector("#"+gid+" .option.selected");var f=document.getElementById(gid+"f");if(!f)return;f.style.display="block";if(!s){f.className="feedback feedback-warning";f.innerHTML="⚠️ Обери варіант відповіді";return}if(s.dataset.correct==="true"){s.classList.add("correct");f.className="feedback feedback-success";f.innerHTML="<strong>✅ Правильно!</strong>";var opts=document.querySelectorAll("#"+gid+" .option");for(var i=0;i<opts.length;i++){opts[i].classList.add("disabled");if(opts[i].dataset.correct==="true")opts[i].classList.add("correct")}addC(tid);showToast("✅ Завдання виконано!","✅")}else{s.classList.add("incorrect");f.className="feedback feedback-error";f.innerHTML="<strong>❌ Неправильно.</strong> Спробуй ще раз."}}
-
 function chkMulti(gid,fid,need,tid){var opts=document.querySelectorAll("#"+gid+" .option");var f=document.getElementById(fid);if(!f)return;f.style.display="block";var selOpts=[];for(var i=0;i<opts.length;i++)if(opts[i].classList.contains("selected"))selOpts.push(opts[i]);if(selOpts.length!==need){f.className="feedback feedback-warning";f.innerHTML="⚠️ Обери <strong>"+need+"</strong> правильні відповіді.";return}var ok=true;for(var j=0;j<opts.length;j++){var sb=opts[j].dataset.correct==="true";var is=opts[j].classList.contains("selected");if(sb&&is)opts[j].classList.add("correct");else if(!sb&&is){opts[j].classList.add("incorrect");ok=false}else if(sb&&!is)ok=false;opts[j].classList.add("disabled")}if(ok){f.className="feedback feedback-success";f.innerHTML="<strong>✅ Правильно!</strong>";addC(tid);showToast(" Завдання виконано!","")}else{f.className="feedback feedback-error";f.innerHTML="<strong>❌ Не зовсім.</strong> Спробуй ще раз.";for(var k=0;k<opts.length;k++)opts[k].classList.remove("correct","incorrect","disabled")}}
-
 function toggleCat(cat){
 var all=document.querySelectorAll('.research-expandable');
 for(var i=0;i<all.length;i++){
@@ -1483,31 +1731,21 @@ all[i].classList.remove('open');
 }
 }
 }
-
 function chkResearch2(){var f=document.getElementById("s2t2f");if(!f)return;f.style.display="block";var visited=Object.keys(researchVisited).length;if(visited<6){f.className="feedback feedback-warning";f.innerHTML="💡 Дослідив лише "+visited+"/6 категорій. Натисни на всі картки, щоб дізнатися більше!";return}f.className="feedback feedback-success";f.innerHTML="<strong>✅ Чудово!</strong> Ти дослідив усі 6 категорій навчання. Тепер ти знаєш, де і як можна вчитися!";addC("step2_task2");showToast("🔍 Дослідження завершено!","🔍")}
-
 function selectPosition(num){selectedPosition=num;selectedArguments=[];var p1=document.getElementById('pos1');var p2=document.getElementById('pos2');p1.classList.remove('selected');p2.classList.remove('selected');if(num===1)p1.classList.add('selected');else if(num===2)p2.classList.add('selected');document.getElementById('argBox').style.display='block';document.getElementById('argTitle').textContent=' Обери аргументи, які підтримують позицію "'+(num===1?' Здобути престижну освіту':'📚 Здобути хорошу освіту і продовжувати постійно навчатися')+'":';renderArguments(num)}
-
 function renderArguments(posNum){var list=document.getElementById('argumentsList');list.innerHTML='';var args=positionArguments[posNum];for(var i=0;i<args.length;i++){var arg=args[i];var div=document.createElement('div');div.className='argument-item';div.dataset.index=i;div.dataset.correct=arg.correct?'true':'false';div.innerHTML='<div class="argument-checkbox"></div><div class="argument-text">'+arg.text+'</div>';div.onclick=function(){if(this.classList.contains('disabled'))return;this.classList.toggle('selected');var idx=parseInt(this.dataset.index);if(this.classList.contains('selected')){selectedArguments.push(idx)}else{selectedArguments=selectedArguments.filter(function(x){return x!==idx})}};list.appendChild(div)}}
-
 function chkArguments(){var f=document.getElementById("s3t1f");if(!f)return;f.style.display="block";if(selectedPosition===0){f.className="feedback feedback-warning";f.innerHTML="⚠️ Обери одну з позицій.";return}if(selectedArguments.length===0){f.className="feedback feedback-warning";f.innerHTML="⚠️ Обери хоча б один аргумент.";return}var items=document.querySelectorAll('#argumentsList .argument-item');var ok=true;for(var i=0;i<items.length;i++){var isCorrect=items[i].dataset.correct==='true';var isSelected=items[i].classList.contains('selected');items[i].classList.add('disabled');if(isCorrect&&isSelected){items[i].classList.add('correct')}else if(!isCorrect&&isSelected){items[i].classList.add('incorrect');ok=false}else if(isCorrect&&!isSelected){ok=false}}
 if(ok){f.className="feedback feedback-success";f.innerHTML="<strong>✅ Чудово!</strong> Ти обрав правильні аргументи. Пам'ятай: навчання — це не лише підготовка до професії, а й шлях до щасливого, успішного та змістовного життя.";addC("step3_task1");showToast("🎯 Завдання виконано!","🎯")}else{f.className="feedback feedback-error";f.innerHTML="<strong>❌ Не зовсім.</strong> Переглянь правильні відповіді (зелені) та помилки (червоні). Спробуй ще раз.";setTimeout(function(){for(var j=0;j<items.length;j++){items[j].classList.remove('correct','incorrect','disabled','selected')}selectedArguments=[]},3000)}}
-
 function chkStoryQuestions(){var f=document.getElementById("s3t2f");if(!f)return;f.style.display="block";var questions=[{gid:'q1',need:2},{gid:'q2',need:2},{gid:'q3',need:2},{gid:'q4',need:2},{gid:'q5',need:1}];var totalOk=0;var allAnswered=true;for(var i=0;i<questions.length;i++){var q=questions[i];var opts=document.querySelectorAll('#'+q.gid+' .option');var selOpts=[];for(var j=0;j<opts.length;j++){opts[j].classList.remove('correct','incorrect');if(opts[j].classList.contains('selected'))selOpts.push(opts[j])}
 if(selOpts.length===0){allAnswered=false;continue}
 var qOk=true;for(var k=0;k<opts.length;k++){var isCorrect=opts[k].dataset.correct==='true';var isSelected=opts[k].classList.contains('selected');if(isCorrect&&isSelected){opts[k].classList.add('correct')}else if(!isCorrect&&isSelected){opts[k].classList.add('incorrect');qOk=false}else if(isCorrect&&!isSelected){qOk=false}}
 if(qOk)totalOk++}
 if(!allAnswered){f.className="feedback feedback-warning";f.innerHTML="💡 Дай відповідь на кожне з п'яти питань.";return}
 if(totalOk===questions.length){f.className="feedback feedback-success";f.innerHTML="<strong>✅ Чудово!</strong> Усі п'ять «аналітичних довідок» проаналізовано правильно! Ти розумієш, як навчання впродовж життя змінює долю людини.";addC("step3_task2");showToast("📖 Завдання виконано!","📖")}else{f.className="feedback feedback-error";f.innerHTML="<strong>❌ Правильно:</strong> "+totalOk+"/5. Переглянь правильні відповіді (зелені) та помилки (червоні). Спробуй ще раз.";setTimeout(function(){for(var m=0;m<questions.length;m++){var opts=document.querySelectorAll('#'+questions[m].gid+' .option');for(var n=0;n<opts.length;n++){opts[n].classList.remove('correct','incorrect','selected')}}},4000)}}
-
 function setLevel(skill,level,btn){checklistLevels[skill]=level;var parent=btn.parentElement;var btns=parent.querySelectorAll('.checklist-level-btn');for(var i=0;i<btns.length;i++){btns[i].classList.remove('selected-1','selected-2','selected-3')}btn.classList.add('selected-'+level);saveP()}
-
 function chkChecklistLevel(){var f=document.getElementById("s4t1f");if(!f)return;f.style.display="block";var answered=0;for(var k in checklistLevels)if(checklistLevels[k]>0)answered++;if(answered<6){f.className="feedback feedback-warning";f.innerHTML="⚠️ Оціни всі 6 умінь. Зараз оцінено: "+answered+"/6.";return}var strong=[],weak=[];for(var k in checklistLevels){if(checklistLevels[k]===3)strong.push(k);if(checklistLevels[k]===1)weak.push(k)}var msg="<strong>✅ Чудово!</strong> Ти оцінив(ла) всі вміння.";if(strong.length>0)msg+="<br>💪 <strong>Сильні сторони:</strong> "+strong.length+" умінь на високому рівні.";if(weak.length>0)msg+="<br> <strong>Потребують розвитку:</strong> "+weak.length+" умінь.";msg+="<br>💡 Тепер перейди до наступного завдання, щоб визначити одну сильну сторону та одну для вдосконалення.";f.className="feedback feedback-success";f.innerHTML=msg;addC("step4_task1");showToast("📋 Чекліст завершено!","📋")}
-
 function selectSkill(type,skill,el){if(type==='strong'){strongSkill=skill;var items=document.querySelectorAll('#strongGrid .skill-choice-item');for(var i=0;i<items.length;i++)items[i].classList.remove('selected-strong');el.classList.add('selected-strong')}else{weakSkill=skill;var items=document.querySelectorAll('#weakGrid .skill-choice-item');for(var i=0;i<items.length;i++)items[i].classList.remove('selected-weak');el.classList.add('selected-weak')}saveP()}
-
 function chkSkillChoice(){var f=document.getElementById("s4t2f");if(!f)return;f.style.display="block";if(!strongSkill||!weakSkill){f.className="feedback feedback-warning";f.innerHTML="⚠️ Обери одну сильну сторону та одну для вдосконалення.";return}f.className="feedback feedback-success";f.innerHTML="<strong>✅ Чудово!</strong><br>💪 <strong>Твоя сильна сторона:</strong> "+strongSkill+"<br>📈 <strong>Потребую вдосконалення:</strong> "+weakSkill+"<br><br>💡 Склади план розвитку цієї навички: визнач мету, ресурси та строки.";addC("step4_task2");showToast("🎯 Завдання виконано!","🎯")}
-
 function ynSelV2(btn){
 var row=btn.parentElement;
 var btns=row.querySelectorAll(".yn-btn-v2");
@@ -1515,7 +1753,6 @@ for(var i=0;i<btns.length;i++)btns[i].classList.remove("selected-yes","selected-
 if(btn.dataset.correct==="yes")btn.classList.add("selected-yes");
 else btn.classList.add("selected-no");
 }
-
 function chkYNV2(gridId,expected,fId,tid){
 var f=document.getElementById(fId);
 if(!f)return;
@@ -1561,43 +1798,28 @@ f.className="feedback feedback-error";
 f.innerHTML="<strong>❌</strong> Правильно: "+ok+"/"+expected+". Спробуй ще раз.";
 }
 }
-
 var tzData={s5t1:[{id:"d1",t:"🏫 Учень відвідує уроки хімії в школі",z:"formal"},{id:"d2",t:"🌍 Дитина вчиться кататися на велосипеді з друзями",z:"informal"},{id:"d3",t:"🎯 Студент проходить курси першої допомоги",z:"nonformal"},{id:"d4",t:" Людина вивчає іноземну мову через фільми та книжки",z:"informal"},{id:"d5",t:" Студент отримує диплом бакалавра в університеті",z:"formal"},{id:"d6",t:"🎯 Фахівець відвідує тренінг із тайм-менеджменту",z:"nonformal"}]};
-
 function initTZ(key){var bankId="tzBank5";var bank=document.getElementById(bankId);if(!bank)return;bank.innerHTML="";var items=tzData[key];var shuffled=items.slice().sort(function(){return Math.random()-0.5});for(var i=0;i<shuffled.length;i++){var it=shuffled[i];var d=document.createElement("div");d.className="tz-item";d.textContent=it.t;d.dataset.id=it.id;d.dataset.correct=it.z;d.onclick=function(){if(this.classList.contains("placed"))return;var all=bank.querySelectorAll(".tz-item");for(var j=0;j<all.length;j++)all[j].classList.remove("selected");this.classList.add("selected");tzSelected[key]=this};bank.appendChild(d)}
 var container=bank.closest(".three-zone-container");var targets=container.querySelectorAll(".tz-target");for(var k=0;k<targets.length;k++)targets[k].querySelector(".tz-target-items").innerHTML=""}
-
 function placeTZ(target,key){if(!tzSelected[key])return;var item=tzSelected[key];var clone=document.createElement("div");clone.className="tz-placed";clone.innerHTML='<span>'+item.textContent+'</span><button class="tz-remove" onclick="removeTZ(this,\''+key+'\')">✕</button>';clone.dataset.id=item.dataset.id;clone.dataset.correct=item.dataset.correct;clone.dataset.zone=target.dataset.zone;target.querySelector(".tz-target-items").appendChild(clone);item.classList.add("placed");item.classList.remove("selected");tzSelected[key]=null}
-
 function removeTZ(btn,key){var placed=btn.parentElement;var id=placed.dataset.id;placed.remove();var bank=document.getElementById("tzBank5");if(bank){var items=bank.querySelectorAll(".tz-item");for(var i=0;i<items.length;i++)if(items[i].dataset.id===id){items[i].classList.remove("placed");break}}}
 function resetTZ(key){tzSelected[key]=null;initTZ(key)}
-
 function chkTZ(key,answers,tid){var f=document.getElementById(key+"f");if(!f)return;f.style.display="block";var container=f.parentElement;var targets=container.querySelectorAll(".tz-target");var placed=[];for(var i=0;i<targets.length;i++){var items=targets[i].querySelectorAll(".tz-placed");for(var j=0;j<items.length;j++)placed.push(items[j])}
 var total=Object.keys(answers).length;if(placed.length<total){f.className="feedback feedback-warning";f.innerHTML="💡 Розмісти всі картки ("+placed.length+"/"+total+").";return}
 var ok=0;for(var k=0;k<placed.length;k++){var id=placed[k].dataset.id;var zone=placed[k].dataset.zone;if(answers[id]===zone){placed[k].style.background="#dcfce7";placed[k].style.borderColor="#16a34a";ok++}else{placed[k].style.background="#fee2e2";placed[k].style.borderColor="#dc2626"}}
 if(ok===total){f.className="feedback feedback-success";f.innerHTML="<strong>✅ Чудово!</strong> Усі картки розміщені правильно!";addC(tid);showToast("🎉 Завдання виконано!","🎉")}else{f.className="feedback feedback-error";f.innerHTML="<strong>❌</strong> Правильно: "+ok+"/"+total+". Червоним позначено помилки. Спробуй ще раз."}}
-
 function fillSel(blank){if(blank.classList.contains("correct"))return;var container=blank.closest(".fill-blanks-text");var all=container.querySelectorAll(".fill-blank");for(var i=0;i<all.length;i++)all[i].style.background="";blank.style.background="#fef3c7";fillSelected={blank:blank}}
-
 function wordSel(word){if(word.classList.contains("used"))return;if(!fillSelected){var bank=word.parentElement;var all=bank.querySelectorAll(".fill-word");for(var i=0;i<all.length;i++)all[i].classList.remove("active");word.classList.add("active");fillSelected={word:word};return}
 fillSelected.blank.textContent=word.textContent;fillSelected.blank.dataset.filled=word.textContent;fillSelected.blank.classList.add("filled");word.classList.add("used");word.classList.remove("active");fillSelected.blank.style.background="";fillSelected=null}
-
 function chkFill(containerId,expected,fId,tid){var f=document.getElementById(fId);if(!f)return;f.style.display="block";var container=document.getElementById(containerId);if(!container)return;var blanks=container.querySelectorAll(".fill-blank");var ok=0;for(var i=0;i<blanks.length;i++){var correct=blanks[i].dataset.correct;var filled=blanks[i].dataset.filled||"";blanks[i].classList.remove("correct","incorrect");if(filled===correct){blanks[i].classList.add("correct");ok++}else blanks[i].classList.add("incorrect")}
 if(ok===expected){f.className="feedback feedback-success";f.innerHTML="<strong>✅ Чудово!</strong> Усі пропуски заповнено правильно!";addC(tid);showToast("🎉 Завдання виконано!","🎉")}else{f.className="feedback feedback-error";f.innerHTML="<strong>❌</strong> Правильно: "+ok+"/"+expected+". Спробуй ще раз."}}
-
 function chkProject(){var f=document.getElementById("s5t3f");if(!f)return;f.style.display="block";var skill=document.getElementById('projectSkill').value;if(!skill){f.className="feedback feedback-warning";f.innerHTML="⚠️ Обери навичку для розвитку.";return}f.className="feedback feedback-success";f.innerHTML="<strong>✅ Чудово!</strong> Ти обрав(ла) навичку: <strong>"+skill+"</strong>.<br><br>💡 Тепер склади детальний план:<br>• 🏫 Як використаєш формальне навчання?<br>• 🎯 Як використаєш неформальне навчання?<br>• 🌍 Як використаєш інформальне навчання?<br><br>🚀 Виконуй план і фіксуй прогрес!";addC("step5_task3");showToast("🚀 Проєкт створено!","🚀")}
-
 function rate(si,r){state.sr[si-1]=r;saveP();var c=document.querySelector('.star-rating[data-skill="'+si+'"]');if(!c)return;var stars=c.querySelectorAll(".star");for(var i=0;i<stars.length;i++)if(i<r)stars[i].classList.add("active");else stars[i].classList.remove("active")}
-
 function resetProgress(){if(confirm("🔄 Почати спочатку?")){localStorage.removeItem("s23v7");location.reload()}}
-
 function showToast(msg,icon){icon=icon||"✅";var c=document.getElementById("toastContainer");if(!c)return;var t=document.createElement("div");t.className="toast";t.innerHTML='<span class="toast-icon">'+icon+'</span><span class="toast-message">'+msg+'</span>';c.appendChild(t);setTimeout(function(){t.classList.add("hiding");setTimeout(function(){t.remove()},4000)},4000)}
-
 function showProgressModal(){updS6();document.getElementById("progressModal").classList.add("active");var c=0;for(var i=1;i<=5;i++)c+=ST["step"+i].c;var p=Math.min(100,Math.round(c/TOTAL_TASKS*100));var ac=PT.t>0?Math.round(PT.c/PT.t*100):0;var cs=0;for(var j=1;j<=5;j++)if(SC[j])cs++;var e=function(id,v){var el=document.getElementById(id);if(el)el.textContent=v};e("mT",c+"/"+TOTAL_TASKS);e("mC",PT.c);e("mS",cs+"/5");e("mA",ac+"%");e("mP",p+"%");var b=document.getElementById("mBar");if(b)b.style.width=p+"%";var l="Початківець",em="⭐☆☆☆☆";if(p>=76){l="🏆 Майстер навчання";em="⭐⭐⭐⭐⭐"}else if(p>=51){l="🥈 Досвідчений";em="⭐⭐⭐☆☆"}else if(p>=26){l="🥉 Учень";em="⭐⭐☆☆☆"}e("mName",l);e("mEmoji",em)}
-
 function showHelpModal(){document.getElementById("helpModal").classList.add("active")}
 function closeModal(id){document.getElementById(id).classList.remove("active")}
-
 var overlays=document.querySelectorAll(".modal-overlay");for(var oi=0;oi<overlays.length;oi++)overlays[oi].addEventListener("click",function(e){if(e.target===this)this.classList.remove("active")});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){var ms=document.querySelectorAll(".modal-overlay.active");for(var i=0;i<ms.length;i++)ms[i].classList.remove("active")}});
 document.addEventListener("DOMContentLoaded",function(){loadP();goToMainPage()});
